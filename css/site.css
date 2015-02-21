@@ -1,0 +1,258 @@
+.clearMe {display: block; height: 0; clear: both; font-size: 0;}
+.clear:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clear {display: inline-block;}
+/* hide IE mac \*/
+* html .clear {height: 1%;}
+.clear {display: block;}
+/* */
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'open sans', arial, sans-serif;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+#map-wrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+#north-pole {
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    background: url(/img/north-pole.png) repeat-y 0% 50% #186CA6; 
+    background-size: contain;
+}
+#south-pole {
+    width: 100%;
+    height: 20%;
+}
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(/img/map.png) repeat-x 0 50% fixed; 
+    background-size: contain;
+}
+#vortex {
+    width: 300px;
+    height: 300px;
+    left: 47%;
+    top: 27%;
+    position: absolute;
+    z-index: 0;
+}
+#vortex .word {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #aaa;
+}
+
+#act {
+    position: relative;
+    left: 47.5%;
+    top: 15%;
+    width: 250px;
+    z-index: 9001; /* what 9000?! there's no way it can be that high. can it? */
+}
+
+#content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    min-width: 250px;
+    max-width: 600px;
+    box-sizing: border-box;
+    background: rgba(255,255,255, 0.9);
+    text-align: left;
+    padding: 40px 40px;
+}
+h1 {
+    color: rgb(68, 68, 68);
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+hr {
+    border: 0px;
+    margin: 30px 0px 10px 0px;
+}
+p {
+    margin: 25px 0px;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: rgb(68, 68, 68);
+}
+p a {
+    color: rgb(36, 93, 193);
+}
+p.small {
+    font-size: 1em;
+    opacity: .6;
+    margin-left: auto;
+    margin-right: auto;
+}
+.phoneForm {
+    margin: 25px 0px 35px 0px;
+    text-align: center;
+}
+
+form input {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 20px auto 0 auto;
+    font-size: 1.1em;
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    width: 250px;
+    border: 1px solid gray;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+form.emailForm input {
+    height: 50px;
+    line-height: 50px;
+}
+form button {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+
+    background: #ea1d2c;
+    box-shadow: 2px 3px 1px #fff;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+}
+form button:hover {
+    box-shadow: 3px 3px 1px #aaa;
+}
+
+a.btn {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 1.0em;
+    -moz-user-select: none;
+    text-decoration: none;
+    border: 0px none;
+    border-radius: 5px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 25px 7px 15px 7px;
+    padding: 0px 23px;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+a.btn:hover {
+    opacity: 1;
+}
+a.btn.facebook {
+    background-color: #3754A9;
+}
+a.btn.twitter {
+    background-color: #2D98D6;
+}
+a.btn.close {
+    background-color: #111;
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 900001; /* it... can't... be... */
+    background: rgba(0, 0, 0, .8);
+    display: table;
+    text-align: center;
+    opacity: 0;
+    -ms-transition: opacity .5s ease-in;
+    -o-transition: opacity .5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+    -webkit-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+    display: none;
+}
+.overlay.visible {
+    opacity: 1;
+}
+.overlay .modal {
+    display: table-cell;
+    vertical-align: middle;
+}
+.overlay .modal .inner {
+    display: block;
+    width: 650px;
+    padding: 30px 40px 0px 40px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,1);
+    background: white;
+    font-family: Helvetica, Arial, sans-serif;
+    -ms-transition: margin-top .5s ease-in;
+    -o-transition: margin-top .5s ease-in;
+    -moz-transition: margin-top .5s ease-in;
+    -webkit-transition: margin-top .5s ease-in;
+    transition: margin-top .5s ease-in;
+    margin-top: -50px;
+}
+.overlay .modal .inner.visible {
+    margin: 0px auto 0px auto;
+}
+.overlay .modal .inner p {
+    color: black;
+}
+.overlay .modal .inner p.gray {
+    color: gray;
+    font-size: 1em;
+}
+
+.overlay .modal .bottom {
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #ddd;
+    padding: 20px 40px;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #aaa;
+    margin-left: -40px;
+}
+.overlay .modal .bottom .disclosure {
+    color: gray;
+    font-size: .9em;
+    line-height: 1.3em;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+}
+.overlay .modal .bottom .disclosure a {
+    color: #444;
+}

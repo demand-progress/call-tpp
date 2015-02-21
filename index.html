@@ -1,0 +1,68 @@
+---
+---
+<html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Public Citizen">
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.calloffthetpp.com/"/>
+    <meta property="og:image" content="https://www.calloffthetpp.com/images/share.png"/>
+    <meta property="og:site_name" content="Call Off TPP"/>
+    <meta property="fb:admins" content="612663871"/>
+    <meta property="og:description" content=""/>
+    <link href="css/site.css" rel="stylesheet">
+    <title>Call Off the TPP!</title>
+    
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.vortex.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div id="map-wrapper">
+        <div id="north-pole"></div>
+        <div id="map"></div>
+        <div id="south-pole"></div>
+        
+        <div id="act">
+            <form id="phoneForm" class="clear phoneForm">
+                <button type="button" id="call_button">Call Now!</button>
+                <input id="phone" name="phone" placeholder="Enter Your Phone Number" style="display:none;"/>
+            </form>
+        </div>
+
+        <div id="vortex">
+            <div class="word">Affordable Medicine</div>
+            <div class="word">Middle Class Jobs</div>
+            <div class="word">Internet Freedom</div>
+        </div>
+    </div>
+        
+
+    <div id="main">
+        <div id="content">
+            {% include content.html %}
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="modal">
+            <div class="inner">
+                {% include call_modal_top.html %}
+                {% include call_script.html %}
+                {% include disclosure.html %}
+
+                <a class="btn facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.calloffthetpp.com">Share on Facebook</a>
+                <a class="btn twitter" target="_blank" href="https://twitter.com/intent/tweet?http://www.calloffthetpp.com/">
+                    <div class="bubble">
+                        Tweet using hashtag <em>#CallTheFcc</em> to be featured on our Twitter feed!
+                        <div class="arrow-down"></div>
+                    </div>
+                    Share on Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
