@@ -1,4 +1,4 @@
-var validatePhone = function(num) {
+function validatePhone(num) {
         num = num.replace(/\s/g, '').replace(/\(/g, '').replace(/\)/g, '');
         num = num.replace("+", "").replace(/\-/g, '');
 
@@ -9,12 +9,12 @@ var validatePhone = function(num) {
             return false;
 
         return num;
-};
+}
 
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-};
+}
 
 $(document).ready(function() {
   circle = {
@@ -28,13 +28,7 @@ $(document).ready(function() {
     cssWarp(circle);
 
     $('#phoneForm').submit(function(e) {
-      
         e.preventDefault();
-        $('#call_button').click();
-    });
-
-    $('#call_button').click(function(e) {
-
         var phone = $('#phone').val();
 
         if (!validatePhone(phone))
