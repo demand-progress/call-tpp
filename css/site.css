@@ -13,17 +13,19 @@ body {
     font-family: "brandon-grotesque",sans-serif;
     letter-spacing: 0.5;
     overflow-y: hidden;
-    background: #88AFCB; /* blend with south pole */
+    background: #315570; /* blend with sea */
 }
 
 #map-wrapper {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* cut off overflow */
 }
 #north-pole {
+    display: none;
     position: absolute;
     width: 100%;
     height: 50%;
@@ -33,18 +35,20 @@ body {
 #south-pole {
     position: absolute;
     width: 100%;
-    height: 50%;
-    top: 50%;
+    height: 25%;
+    top: calc(50% + 253px); /* match right side of graphic */
     background: #88AFCB;
 }
 
 #map {
     position: relative;
     z-index:5;
-    left: 40%;
-    width: 60%;
     height: 100%;
-    background: url(../img/map.png) repeat-x 75% 50%; 
+    left: 40%;
+    width: 1200px; /* fixed width, avoid percentage based offsets */
+    background: url(../img/map.png) repeat-x;
+    background-position-x: -375px;
+    background-position-y: 50%;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -57,7 +61,7 @@ body {
 
 #vortex {
     position: relative;
-    left: calc(50% - 150px);
+    left: 175px;
     top: calc(50% - 150px);
     width: 250px;
     height: 250px;
@@ -107,7 +111,7 @@ body {
 
 #act {
     position: absolute;
-    left: calc(70% - 125px);
+    left: calc(40% + 230px);
     top: 70%;
     width: 250px;
     z-index: 9001; /* what 9000?! there's no way it can be that high. can it? */
