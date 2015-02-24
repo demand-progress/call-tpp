@@ -230,7 +230,7 @@ a.btn.close {
     -moz-transition: opacity .5s ease-in;
     -webkit-transition: opacity .5s ease-in;
     transition: opacity .5s ease-in;
-    //display: none;
+    display: none;
 }
 .overlay.visible {
     opacity: 1;
