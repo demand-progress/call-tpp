@@ -62,6 +62,10 @@ and (max-width : 640px) {
   }
 
   .overlay { left: 0; width: 100%; }
+  .overlay .inner p { margin: 20px; }
+  .button-row { top: 100%; }
+  a.btn { display: block; width: 100%; }
+  a.btn.close { margin-left: 90%; }
 
   /* just hide the map */
   #map-wrapper { display: none; }
