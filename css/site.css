@@ -84,14 +84,14 @@ body {
     font-size: 1.5em;
     line-height: 30px;
     position: relative;
-    top: 75px;
-    width: 50px;
+    top: 80px;
+    width: 80px;
     margin: 0 auto;
     text-align: center;
 
-    -webkit-animation: spin-reversed 15s linear infinite;
-    -moz-animation:spin-reversed 15s linear infinite;
-    animation:spin-reversed 15s linear infinite;
+    -webkit-animation: spin-reversed 30s linear infinite;
+    -moz-animation:spin-reversed 30s linear infinite;
+    animation:spin-reversed 30s linear infinite;
 
 /*    -webkit-animation-play-state:paused;
     -moz-animation-play-state:paused;
