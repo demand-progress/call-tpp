@@ -18,7 +18,7 @@ function validateEmail(email) {
 
 $(document).ready(function() {
   circle = {
-      path: { radius: 100, center: [125, 10], angle: "180deg"},
+      path: { radius: 100, center: [125, 15], angle: "180deg"},
       targets: ".circle",
       rotationMode: "rotate",
       align: "center",

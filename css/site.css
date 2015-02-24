@@ -12,8 +12,8 @@ html, body {
 body {
     font-family: "brandon-grotesque",sans-serif;
     letter-spacing: 0.5;
-    overflow: -moz-scrollbars-vertical;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    background: #88AFCB; /* blend with south pole */
 }
 
 #map-wrapper {
@@ -103,6 +103,10 @@ body {
     margin: 0 auto;
 }
 .overlay .cta {
+    position: relative;
+    width: 100%;
+    left: 0;
+    min-height: 0;
     padding: 10px 20px;
     font-size: 1em;
 }
@@ -114,7 +118,6 @@ body {
     top: 0;
     width: 40%;
     min-width: 250px;
-    height: 100%;
     box-sizing: border-box;
     background: #165B92;
     text-align: left;
@@ -168,7 +171,7 @@ form button {
     display: inline-block;
     margin: 10px auto;
 
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: bold;
     padding: 8px 25px;
     box-sizing: border-box;
@@ -206,7 +209,7 @@ a.btn {
     line-height: 50px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    width: 32.9%;
+    width: 32%;
     box-sizing: border-box;
     color: white;
 }
@@ -231,9 +234,9 @@ a.btn.close {
 
 .overlay {
     position: absolute;
-    left: 50%;
-    top: 0px;
-    width: 50%;
+    left: 40%;
+    top: 0;
+    width: 60%;
     height: 100%;
     background: white;
     display: table;
