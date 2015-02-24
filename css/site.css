@@ -80,19 +80,24 @@ body {
     z-index: 9001; /* what 9000?! there's no way it can be that high. can it? */
 }
 
-#cta {
+.cta {
     position: relative;
     width: 100%;
-    top: 60%;
+    top: 0;
     padding: 20px;
+    box-sizing: border-box;
     background: #35BEB3;
     text-transform: uppercase;
     text-align: center;
     color: white;
 }
-#cta h2 {
+.cta h2 {
     padding: 0;
     margin: 0 auto;
+}
+.overlay .cta {
+    padding: 10px 20px;
+    font-size: 1em;
 }
 
 #content {
@@ -110,7 +115,11 @@ body {
 h1 {
     text-transform: uppercase;
     font-size: 2em;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 hr {
     border: 0px;
@@ -155,7 +164,7 @@ form button {
     padding: 8px 25px;
     box-sizing: border-box;
     
-    background: #df7065;
+    background: #cf4d40; /* #df7065; */
     box-shadow: 2px 2px white;
 
     color: white;
@@ -165,6 +174,11 @@ form button {
 
 }
 
+.button-row {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
 a.btn {
     display: inline-block;
     position: relative;
@@ -173,107 +187,59 @@ a.btn {
     cursor: pointer;
     white-space: nowrap;
     font-size: 1.0em;
-    -moz-user-select: none;
     text-decoration: none;
-    border: 0px none;
-    border-radius: 5px;
-    font-weight: 700;
+    border: 0;
     line-height: 50px;
     text-transform: uppercase;
-    margin: 25px 7px 15px 7px;
-    padding: 0px 23px;
+    letter-spacing: 0.2em;
+    width: 32.9%;
+    box-sizing: border-box;
     color: white;
-    font-family: Helvetica, Arial, sans-serif;
 }
 a.btn:hover {
     opacity: 1;
 }
 a.btn.facebook {
-    background-color: #3754A9;
+    background-color: #2DBAAF;
 }
 a.btn.twitter {
-    background-color: #2D98D6;
+    background-color: #0F65A3;
+}
+a.btn.email {
+    background-color: #094679;
 }
 a.btn.close {
-    background-color: #111;
+    display: block;
+    color: gray;
+    margin-left: 92%;
+    width: 25px;
 }
 
 .overlay {
     position: fixed;
-    left: 0px;
+    left: 50%;
     top: 0px;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    z-index: 900001; /* it... can't... be... */
-    background: rgba(0, 0, 0, .8);
+    background: white;
     display: table;
     text-align: center;
-    opacity: 0;
+    z-index: 9002; /* it... can't... be... */
     -ms-transition: opacity .5s ease-in;
     -o-transition: opacity .5s ease-in;
     -moz-transition: opacity .5s ease-in;
     -webkit-transition: opacity .5s ease-in;
     transition: opacity .5s ease-in;
-    display: none;
+    //display: none;
 }
 .overlay.visible {
     opacity: 1;
 }
-.overlay .modal {
-    display: table-cell;
-    vertical-align: middle;
+.overlay .inner p {
+    margin: 20px 75px;
+    text-align: left;
 }
-.overlay .modal .inner {
-    display: block;
-    width: 650px;
-    padding: 30px 40px 0px 40px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0,0,0,1);
-    background: white;
-    font-family: Helvetica, Arial, sans-serif;
-    -ms-transition: margin-top .5s ease-in;
-    -o-transition: margin-top .5s ease-in;
-    -moz-transition: margin-top .5s ease-in;
-    -webkit-transition: margin-top .5s ease-in;
-    transition: margin-top .5s ease-in;
-    margin-top: -50px;
-}
-.overlay .modal .inner.visible {
-    margin: 0px auto 0px auto;
-}
-.overlay .modal .inner p {
-    color: black;
-}
-.overlay .modal .inner p.gray {
+.overlay .inner p.gray {
     color: gray;
     font-size: 1em;
-}
-
-.overlay .modal .bottom {
-    -webkit-border-bottom-right-radius: 10px;
-    -webkit-border-bottom-left-radius: 10px;
-    -moz-border-radius-bottomright: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background: #ddd;
-    padding: 20px 40px;
-    width: 100%;
-    margin-top: 20px;
-    border-top: 1px solid #aaa;
-    margin-left: -40px;
-}
-.overlay .modal .bottom .disclosure {
-    color: gray;
-    font-size: .9em;
-    line-height: 1.3em;
-    margin: 10px 0px 0px 0px;
-    padding: 0px;
-}
-.overlay .modal .bottom .disclosure a {
-    color: #444;
 }

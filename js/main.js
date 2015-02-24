@@ -8,4 +8,8 @@ $(document).ready(function() {
       // showPath: {thickness: 1, color: "white"},
     };
     cssWarp(circle);
+
+    $('.close').click(function() {
+      $('.overlay').css('display','none');
+    });
 });
