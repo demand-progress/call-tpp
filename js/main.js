@@ -18,12 +18,12 @@ function validateEmail(email) {
 
 $(document).ready(function() {
   circle = {
-      path: { radius: 125, center: [150, 35], angle: "180deg"},
+      path: { radius: 100, center: [125, 10], angle: "180deg"},
       targets: ".circle",
       rotationMode: "rotate",
       align: "center",
-      css: "visibility: visible; position: relative; top: 0px; width: 300px; height: 300px;",
-      // showPath: {thickness: 1, color: "white"},
+      css: "visibility: visible; position: relative; top: 0px; width: 250px; height: 250px;",
+      //showPath: {thickness: 1, color: "white"},
     };
     cssWarp(circle);
 

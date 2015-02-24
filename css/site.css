@@ -18,9 +18,9 @@ body {
 
 #map-wrapper {
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 #north-pole {
@@ -37,20 +37,22 @@ body {
     top: 50%;
     background: #88AFCB;
 }
+
 #map {
     position: relative;
     z-index:5;
-    width: 100%;
+    left: 40%;
+    width: 60%;
     height: 100%;
-    background: url(../img/map.png) repeat-x 80% 50%; 
+    background: url(../img/map.png) repeat-x 75% 50%; 
 }
 #vortex {
     position: relative;
-    left: calc(50% - 185px);
-    top: calc(50% - 185px);
-    width: 300px;
-    height: 300px;
-    border-radius: 300px;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
     background: rgba(255, 255, 255, 0.5);
     color: #3C5160;
 
@@ -61,7 +63,7 @@ body {
     font-size: 1.5em;
     line-height: 30px;
     position: relative;
-    top: 100px;
+    top: 75px;
     width: 50px;
     margin: 0 auto;
     text-align: center;
@@ -70,13 +72,13 @@ body {
     font-size: 0.7em;
 }
 #vortex .circle {
-    font-size: 20px;
+    font-size: 0.95em;
     text-transform: uppercase;
 }
 
 #act {
     position: absolute;
-    left: calc(75% - 125px);
+    left: calc(70% - 125px);
     top: 70%;
     width: 250px;
     z-index: 9001; /* what 9000?! there's no way it can be that high. can it? */
@@ -85,8 +87,8 @@ body {
 .cta {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 50%;
+    left: 40%;
+    width: 60%;
     min-height: 75px;
     z-index: 6;
     padding: 20px;
@@ -110,13 +112,13 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 50%;
+    width: 40%;
     min-width: 250px;
     height: 100%;
     box-sizing: border-box;
     background: #165B92;
     text-align: left;
-    padding: 70px 90px;
+    padding: 70px 50px;
     color: white;
 }
 h1 {
