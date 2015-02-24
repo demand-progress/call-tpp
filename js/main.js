@@ -16,8 +16,7 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-$(document).ready(function() {
-  circle = {
+var vortexCircle = {
       path: { radius: 100, center: [125, 15], angle: "180deg"},
       targets: ".circle",
       rotationMode: "rotate",
@@ -25,7 +24,9 @@ $(document).ready(function() {
       css: "visibility: visible; position: relative; top: 0px; width: 250px; height: 250px;",
       //showPath: {thickness: 1, color: "white"},
     };
-    cssWarp(circle);
+
+$(document).ready(function() {
+    $('h4.circle').css('visibility','hidden'); //hide to avoid FOUT
 
     $('input').on('focus', function() {
         $('#vortex').css('animation-play-state','paused');
