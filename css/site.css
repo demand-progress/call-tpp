@@ -171,7 +171,12 @@ form button {
     border: 0 none;
     cursor: pointer;
     text-transform: uppercase;
-
+}
+form button:hover {
+    box-shadow: none;
+}
+form button:active {
+    box-shadow: 2px 2px black inset;
 }
 
 .button-row {
