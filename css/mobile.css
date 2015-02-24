@@ -6,7 +6,6 @@ and (max-width : 1400px) {
     #act { left: calc(40% + 280px); }
 }
 
-
 @media only screen 
 and (max-width : 1200px) {
    /* design width */
@@ -39,10 +38,29 @@ and (max-width : 640px) {
   #act { left: calc(40% + 90px); }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/* phone design */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+and (min-width : 320px)
+and (max-width : 640px) {
+  .cta {
+    z-index: 10;
+    left: 0;
+    width: 100%;
+  }
+
+  #act {
+    top: 75px;
+    left: 0;
+    width: 100%;
+  }
+
+  #content {
+    width: 100%;
+    left: 0;
+    top: 75px;
+    padding: 150px 20px;
+  }
+
+  #map-wrapper { display: none; }
 }
 

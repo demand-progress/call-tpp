@@ -6,6 +6,8 @@ email_body: Hey, check out this site and call the Senate today! http://calloffth
 <html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+
     <meta name="description" content="">
     <meta name="author" content="Public Citizen">
     <meta property="og:title" content=""/>
@@ -13,7 +15,7 @@ email_body: Hey, check out this site and call the Senate today! http://calloffth
     <meta property="og:url" content="http://www.calloffthetpp.com/"/>
     <meta property="og:image" content="https://www.calloffthetpp.com/images/share.png"/>
     <meta property="og:site_name" content="Call Off TPP"/>
-    <meta property="fb:admins" content="612663871"/>
+    <meta property="fb:admins" content="701690" />
     <meta property="og:description" content=""/>
     <link href="css/site.css?t={{  site.time | date: '%s' }}" rel="stylesheet">
     <link href="css/mobile.css?t={{  site.time | date: '%s' }}" rel="stylesheet">
@@ -28,10 +30,7 @@ email_body: Hey, check out this site and call the Senate today! http://calloffth
         <script type="text/javascript">
             try {
                 Typekit.load({
-                    active: function() {
-                        cssWarp(vortexCircle);
-                        $('h4.circle').fadeIn();
-                    },
+                    active: vortexCircleText,
                 });
             } catch(e) {};
      </script>
@@ -59,18 +58,19 @@ email_body: Hey, check out this site and call the Senate today! http://calloffth
         </div>
     </div>
 
-        <div class="cta">
-            <h2>Act Now, Call The Senate</h2>
-        </div>
+    <div class="cta">
+        <h2>Act Now, Call The Senate</h2>
+    </div>
 
-        <div id="act">
-            <form id="phoneForm" class="clear phoneForm">
-                <input id="phone" name="phone" placeholder="Enter Your Phone #"/>
-                <button id="call_button" type="submit">Call Me</button>
-            </form>
+    <div id="act">
+        <form id="phoneForm" class="clear phoneForm">
+            <input id="phone" name="phone" placeholder="Enter Your Phone #"/>
+            <button id="call_button" type="submit">Call Me</button>
+        </form>
 
-            <!--{% include disclosure.html %}-->
-        </div>
+        <!--{% include disclosure.html %}-->
+    </div>
+
 
     <div class="overlay">
             <div class="inner">

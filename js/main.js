@@ -16,7 +16,8 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-var vortexCircle = {
+function vortexCircleText() {
+    var vortexCircle = {
       path: { radius: 100, center: [125, 15], angle: "180deg"},
       targets: ".circle",
       rotationMode: "rotate",
@@ -24,6 +25,10 @@ var vortexCircle = {
       css: "visibility: visible; position: relative; top: 0px; width: 250px; height: 250px;",
       //showPath: {thickness: 1, color: "white"},
     };
+
+    cssWarp(vortexCircle);
+    $('h4.circle').fadeIn();   
+}
 
 $(document).ready(function() {
     $('h4.circle').css('visibility','hidden'); //hide to avoid FOUT
@@ -73,4 +78,14 @@ $(document).ready(function() {
     $('.close').click(function() {
       $('.overlay').css('display','none');
     });
+
+     $(window).resize(function() {
+        if(this.resizeTO) clearTimeout(this.resizeTO);
+        this.resizeTO = setTimeout(function() {
+            $(this).trigger('resizeEnd');
+        }, 100);
+    });
+
+    $(window).bind('resizeEnd', vortexCircleText);
+    $(window).bind('resizeEnd', vortexCircleText);
 });
