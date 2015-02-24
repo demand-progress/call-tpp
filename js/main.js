@@ -27,6 +27,16 @@ $(document).ready(function() {
     };
     cssWarp(circle);
 
+    $('input').on('focus', function() {
+        $('#vortex').css('animation-play-state','paused');
+        $('#vortex .center').css('animation-play-state','paused');
+    });
+    $('input').on('blur', function() {
+        $('#vortex').css('animation-play-state','running');
+        $('#vortex .center').css('animation-play-state','running');
+    });
+
+
     $('#phoneForm').submit(function(e) {
         e.preventDefault();
         var phone = $('#phone').val();
