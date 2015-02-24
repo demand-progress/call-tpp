@@ -28,11 +28,7 @@ email_body: Hey, check out this site and call the Senate today! http://calloffth
     <script type="text/javascript" src="js/main.js?t={{  site.time | date: '%s' }}"></script>
 
         <script type="text/javascript">
-            try {
-                Typekit.load({
-                    active: vortexCircleText,
-                });
-            } catch(e) {};
+            try { Typekit.load({ active: vortexCircleText }); } catch(e) {};
      </script>
 
     {% include analytics.html %}
