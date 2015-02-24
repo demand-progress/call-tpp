@@ -1,0 +1,17 @@
+#world {
+  fill: #87AECB;
+  stroke-width: 0px;
+}
+
+#graticule {
+  stroke-width: 0.3px;
+}
+
+#tpp {
+  fill: #496E8B;
+  stroke-width: 0px;
+}
+
+#background {
+  fill: #2F5471;
+}
