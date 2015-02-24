@@ -10,73 +10,105 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: 'open sans', arial, sans-serif;
+    font-family: "brandon-grotesque",sans-serif;
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
 }
 
 #map-wrapper {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 50%;
     height: 100%;
 }
 #north-pole {
+    position: fixed;
     width: 100%;
     height: 50%;
-    position: fixed;
-    background: url(../img/north-pole.png) repeat-y 0% 50% #186CA6; 
-    background-size: contain;
+    top: 0;
+    background: #2F5571;
 }
 #south-pole {
+    position: fixed;
     width: 100%;
-    height: 20%;
+    height: 50%;
+    top: 50%;
+    background: #88AFCB;
 }
 #map {
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 50%;
     height: 100%;
-    background: url(../img/map.png) repeat-x 0 50% fixed; 
+    background: url(../img/map.png) repeat-x 175px 50% fixed; 
     background-size: contain;
 }
 #vortex {
+    position: relative;
+    left: calc(50% - 140px);
+    top: calc(50% - 150px);
     width: 300px;
     height: 300px;
-    left: 47%;
-    top: 27%;
-    position: absolute;
-    z-index: 0;
+    border-radius: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #3C5160;
+
 }
-#vortex .word {
-    width: 100px;
+#vortex .center {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 30px;
+    position: relative;
+    top: 100px;
+    width: 50px;
+    margin: 0 auto;
     text-align: center;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px #aaa;
+}
+#vortex .center .small {
+    font-size: 0.7em;
+}
+#vortex .circle {
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 #act {
     position: relative;
-    left: 47.5%;
-    top: 15%;
+    left: calc(50% - 125px);
+    top: 65%;
     width: 250px;
     z-index: 9001; /* what 9000?! there's no way it can be that high. can it? */
 }
 
+#cta {
+    position: relative;
+    width: 100%;
+    top: 60%;
+    padding: 20px;
+    background: #35BEB3;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+#cta h2 {
+    padding: 0;
+    margin: 0 auto;
+}
+
 #content {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    width: 40%;
+    width: 50%;
     min-width: 250px;
-    max-width: 600px;
     box-sizing: border-box;
-    background: rgba(255,255,255, 0.9);
+    background: #165B92;
     text-align: left;
-    padding: 40px 40px;
+    padding: 70px 90px;
+    color: white;
 }
 h1 {
-    color: rgb(68, 68, 68);
+    text-transform: uppercase;
     font-size: 2em;
     margin-bottom: 30px;
 }
@@ -88,17 +120,13 @@ p {
     margin: 25px 0px;
     font-size: 1em;
     line-height: 1.5em;
-    color: rgb(68, 68, 68);
 }
 p a {
-    color: rgb(36, 93, 193);
 }
 p.small {
     font-size: 1em;
-    opacity: .6;
-    margin-left: auto;
-    margin-right: auto;
 }
+
 .phoneForm {
     margin: 25px 0px 35px 0px;
     text-align: center;
@@ -108,40 +136,33 @@ form input {
     display: inline-block;
     box-sizing: border-box;
     margin: 20px auto 0 auto;
-    font-size: 1.1em;
+    font-size: 0.95em;
+    font-weight: bold;
     padding: 0px 10px;
     height: 40px;
     line-height: 40px;
     width: 250px;
     border: 1px solid gray;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
     text-align: center;
-}
-form.emailForm input {
-    height: 50px;
-    line-height: 50px;
+    text-transform: uppercase;
 }
 form button {
     display: inline-block;
-    margin: 0 15px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0px 10px;
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
+    margin: 10px auto;
 
-    background: #ea1d2c;
-    box-shadow: 2px 3px 1px #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 8px 25px;
+    box-sizing: border-box;
+    
+    background: #df7065;
+    box-shadow: 2px 2px white;
+
     color: white;
     border: 0 none;
     cursor: pointer;
-}
-form button:hover {
-    box-shadow: 3px 3px 1px #aaa;
+    text-transform: uppercase;
+
 }
 
 a.btn {
