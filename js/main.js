@@ -16,6 +16,13 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+var trackEvent = function(ev) {
+    window['optimizely'] = window['optimizely'] || [];
+    window.optimizely.push(["trackEvent", ev]);
+
+    ga('send', 'event', ev);
+};
+
 function vortexCircleText() {
     var vortexCircle = {
       path: { radius: 100, center: [125, 15], angle: "180deg"},
@@ -27,7 +34,7 @@ function vortexCircleText() {
     };
 
     cssWarp(vortexCircle);
-    $('h4.circle').fadeIn();   
+    $('h4.circle').fadeIn();
 }
 
 $(document).ready(function() {
