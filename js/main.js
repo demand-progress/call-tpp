@@ -94,5 +94,4 @@ $(document).ready(function() {
     });
 
     $(window).bind('resizeEnd', vortexCircleText);
-    $(window).bind('resizeEnd', vortexCircleText);
 });
